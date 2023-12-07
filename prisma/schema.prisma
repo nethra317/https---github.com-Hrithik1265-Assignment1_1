@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./prisma/client"
+}
+
+datasource assignment {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+// schema.prisma
+
+// Define the Subject model
+model Subject {
+  id          String      @id @unique
+  description String      @assignment.VarChar(255)
+  subjectId   String?
+
+  chapters    Int?
+  semesters   Int?
+}
+
+
+
