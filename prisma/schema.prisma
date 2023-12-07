@@ -14,7 +14,6 @@ datasource assignment {
 
 // schema.prisma
 
-// Define the Subject model
 model Subject {
   id          String      @id @unique
   description String      @assignment.VarChar(255)
