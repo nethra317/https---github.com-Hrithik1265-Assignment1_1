@@ -1,4 +1,3 @@
-// Import necessary modules
 import { PrismaClient } from '@prisma/client/edge'
 
 const express = require('express');
