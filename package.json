@@ -1,8 +1,8 @@
 {
-  "name": "subject-api",
+  "name": "subject_ass",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,8 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.7.0",
-    "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "nodemon": "^3.0.2"
+    "pg": "^8.11.3"
   }
 }

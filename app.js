@@ -1,14 +1,16 @@
-import { PrismaClient } from '@prisma/client/edge'
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 const app = express();
-
+const PORT = 3000
 app.use(bodyParser.json());
 
+app.get('/', (request, response) => {
+         response.json({Welcome: 'Welcome to the port 3000' })
+})
+     
 // Create a new subject
 app.post('/subjects', async (req, res) => {
   const { description, subjectMasterId, chapters, semesters } = req.body;
@@ -45,7 +47,6 @@ app.delete('/subjects/:id', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+         console.log(`Server has been Started at port ${PORT}`);
 });

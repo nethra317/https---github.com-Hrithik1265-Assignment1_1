@@ -6,7 +6,7 @@ generator client {
   output = "app.js"
 }
 
-datasource db {
+datasource assignment {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
@@ -98,3 +98,4 @@ model Subject {
   chapters      String
   semesters     String
 }
+
