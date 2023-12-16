@@ -52,14 +52,14 @@ app.get('/api/v1/hod/subject', async (req, res) => {
 app.delete('/api/v1/hod/group/subject', async (req, res) => {
   try {
     const { subject_ids } = req.body;
-    
+
         // Check if subjects are active before deleting
         const activeSubjects = await prisma.subject.findMany({
           where: {
             id: {
               in: subject_ids,
             },
-            status: true, // Assuming 'status' represents the active status of subjects
+            status: true, 
           },
         });
     
